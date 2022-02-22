@@ -1,4 +1,6 @@
 int main(int argc, char *argv[])
 {
-    // Default
+    // Variables
+    int ss = 100;
+    int n = 20;
 }
