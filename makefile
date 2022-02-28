@@ -1,11 +1,12 @@
 CC = gcc
 
 all: master slave
-%.o: %.c
-	$(CC) -c -std=gnu99 $<
-master: master.o
-	$(CC) -o master master.o
-slave: slave.o
-	$(CC) -o slave slave.o
+
+master: master.c
+	$(CC) -o $@ $< -g -I -std=gnu99
+
+slave: slave.c
+	$(CC) -o $@ $< -g -I -std=gnu99
+
 clean:
-	rm master slave *.o
+	rm cstest logfile.* master slave
